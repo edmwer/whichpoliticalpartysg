@@ -20,10 +20,11 @@
                 <h4>Which political party represents me?</h4>
                 <template v-for="question in questions">
                     <div class="form-group">
-                        <label v-html="question.question"></label>
+                        <label v-html="question.label"></label>
                         <ul class="list-group">
                             <li class="list-group-item" v-for="choice in question.choices"
-                                @click="selectChoice(question, choice)" :class="{'active':choice.selected}"></li>
+                                @click="selectChoice(question, choice)" :class="{'active':choice.selected}"
+                                v-html="choice.label"></li>
                         </ul>
                     </div>
                 </template>
