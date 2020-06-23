@@ -1,2 +1,2 @@
 # Which political party represents me?
-Find out now at [our official site](https://whichpoliticalpartysg.github.io)
+Find out now at [our official site](https://edmwer.github.io/whichpoliticalpartysg)
