@@ -14,13 +14,19 @@
         li.list-group-item.option {
             cursor: pointer;
         }
+
+        .disclaimer {
+            font-size: 11pt;
+            font-weight: bold;
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="wall">
-        <div class="container">
-            <div id="vueapp">
+    <div id="vueapp">
+        <div class="wall">
+            <div class="container">
                 <h4>Which political party represents me?</h4>
                 <template v-for="question in questions">
                     <div class="form-group">
@@ -37,14 +43,41 @@
                 </div>
             </div>
         </div>
+        <div id="resultsModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Results</h5>
+                        <button type="button" class="close" @click="hideResultsModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>You are most aligned with <strong v-html="result.party"></strong></h4>
+                        <div class="disclaimer">Disclaimer: This is not a serious poll. Please take your results with at
+                            least 5 pinches of salt. Chill brudder!</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" @click="hideResultsModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <script src="bundle.js"></script>
     <script>
         let vueapp = null;
+
+        const showResultsModal = function () {
+            $('#resultsModal').modal('show');
+        };
+        const hideResultsModal = function () {
+            $('#resultsModal').modal('hide');
+        };
+
         const setArrayObjectProperty = function (arr, property, value) {
             _.each(arr, function (item) { _.set(item, property, value); });
         };
@@ -60,7 +93,10 @@
                 el: '#vueapp',
                 data: {
                     questions: questions,
-                    selection: {}
+                    selection: {},
+                    result: {
+                        party: ''
+                    }
                 },
                 methods: {
                     selectChoice: function (question, choice) {
@@ -70,7 +106,19 @@
                     },
                     getScore: function () {
                         let score = _.sumBy(Object.values(this.selection));
-                        console.log(score);
+                        if (score > 200) {
+                            this.result.party = 'PAP';
+                        } else if (score > 100) {
+                            this.result.party = 'WP';
+                        } else if (score > 0) {
+                            this.result.party = 'PSP / PV / NSP / SDA';
+                        } else {
+                            this.result.party = 'SDP';
+                        }
+                        showResultsModal();
+                    },
+                    hideResultsModal: function () {
+                        hideResultsModal();
                     }
                 }
             });
