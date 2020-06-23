@@ -42,8 +42,17 @@
         }
 
         .hero div {
+            font-style: italic;
             color: #ffffff;
-            font-size: 1em;
+            font-size: 1.2em;
+            padding: 5px 20px;
+            text-shadow: rgba(25, 25, 25, 0.5) 2px 2px;
+        }
+
+        .hero div a,
+        .hero div a:hover,
+        .hero div a:visited {
+            color: #ffffff;
         }
     </style>
 </head>
@@ -57,8 +66,8 @@
                     <div>Disclaimer: This poll is strictly for entertainment purposes only and does not use any
                         scientific methods to arrive at its conclusion.
                         By staying on this page, you agree to indemnify the author of all damages. If you feel offended,
-                        here's a good <a href="https://gov.sg">website</a> to relax. Stay Safe!<br />
-                        No cookies were collected for the purpose of this survey. Your privacy is safe.</div>
+                        here's a good <a href="https://gov.sg">website</a> to relax. Stay Safe!
+                        No cookies were collected for the purpose of this survey. Your privacy is safe within the confines of this page.</div>
                 </div>
                 <template v-for="question in questions">
                     <div class="form-group">
