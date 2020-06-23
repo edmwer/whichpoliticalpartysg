@@ -5,7 +5,7 @@
             "label": "What is the ideal age to withdraw CPF?",
             "choices": [
                 {
-                    " label": "Lump sum at 55",
+                    "label": "Lump sum at 55",
                     "points": 0
                 },
                 {
@@ -27,7 +27,7 @@
             "label": "Do you prefer high salary + high cost of living or low salary + low cost of living?",
             "choices": [
                 {
-                    " label": "High salary + High cost of living",
+                    "label": "High salary + High cost of living",
                     "points": 20
                 },
                 {
@@ -41,7 +41,7 @@
             "label": "Do you prefer freedom or security?",
             "choices": [
                 {
-                    " label": "Freedom",
+                    "label": "Freedom",
                     "points": 0
                 },
                 {
@@ -55,7 +55,7 @@
             "label": "Do you wish there are alternate taxes like Capital Gains Tax / Inheritance Tax instead of GST?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 0
                 },
                 {
@@ -69,7 +69,7 @@
             "label": "Do you wish to see more immigration to Singapore?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 15
                 },
                 {
@@ -83,7 +83,7 @@
             "label": "Do you like international cuisine (e.g. Mala Xiangguo) or local cuisine?",
             "choices": [
                 {
-                    " label": "International <3",
+                    "label": "International! I <3 Mala Xiangguo &amp; Lady M",
                     "points": 15
                 },
                 {
@@ -97,7 +97,7 @@
             "label": "Do you consider yourself high SES or low SES?",
             "choices": [
                 {
-                    " label": "High SES",
+                    "label": "High SES",
                     "points": 20
                 },
                 {
@@ -111,7 +111,7 @@
             "label": "Should women serve NS?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 0
                 },
                 {
@@ -125,7 +125,7 @@
             "label": "Should men serve NS?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 20
                 },
                 {
@@ -139,7 +139,7 @@
             "label": "What is your ideal marriage age?",
             "choices": [
                 {
-                    " label": "Below 25",
+                    "label": "Below 25",
                     "points": 0
                 },
                 {
@@ -165,7 +165,7 @@
             "label": "Should Section 377A be abolished?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": -25
                 },
                 {
@@ -183,7 +183,7 @@
             "label": "Do you prefer stability in a country?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 15
                 },
                 {
@@ -197,7 +197,7 @@
             "label": "Are you / your loved ones migrants?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 15
                 },
                 {
@@ -211,7 +211,7 @@
             "label": "Do you hate talking about politics?",
             "choices": [
                 {
-                    " label": "Yes, shhhh...",
+                    "label": "Yes, shhhh...",
                     "points": 30
                 },
                 {
@@ -225,7 +225,7 @@
             "label": "Do you live in Hougang?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": -15
                 },
                 {
@@ -239,7 +239,7 @@
             "label": "Do you like to buy Toto/4D?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 15
                 },
                 {
@@ -253,11 +253,11 @@
             "label": "Do you like the recent Care &amp; Support package?",
             "choices": [
                 {
-                    " label": "Yes, I donated it",
+                    "label": "Yes, I donated it",
                     "points": 25
                 },
                 {
-                    " label": "Yes, I think it's useful for my family",
+                    "label": "Yes, I think it's useful for my family",
                     "points": 15
                 },
                 {
@@ -271,11 +271,11 @@
             "label": "What do you think of Mothership.sg?",
             "choices": [
                 {
-                    " label": "It's useful",
+                    "label": "It's useful",
                     "points": 15
                 },
                 {
-                    " label": "meh",
+                    "label": "meh",
                     "points": 15
                 },
                 {
@@ -289,7 +289,7 @@
             "label": "Do you earn more than $5,000 a month?",
             "choices": [
                 {
-                    " label": "Yes",
+                    "label": "Yes",
                     "points": 25
                 },
                 {
@@ -303,15 +303,15 @@
             "label": "What first come to mind when you see a lighting strike?",
             "choices": [
                 {
-                    " label": "Majulah PAP!",
+                    "label": "Majulah PAP!",
                     "points": 50
                 },
                 {
-                    " label": "My Kindergarten logo",
+                    "label": "My Kindergarten logo",
                     "points": 25
                 },
                 {
-                    " label": "Going to rain loh",
+                    "label": "Going to rain loh",
                     "points": 0
                 },
                 {

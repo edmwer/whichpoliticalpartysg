@@ -10,6 +10,10 @@
         div.wall {
             margin: 50px 0px 0px 0px;
         }
+
+        li.list-group-item.option {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -22,7 +26,7 @@
                     <div class="form-group">
                         <label v-html="question.label"></label>
                         <ul class="list-group">
-                            <li class="list-group-item" v-for="choice in question.choices"
+                            <li class="list-group-item option" v-for="choice in question.choices"
                                 @click="selectChoice(question, choice)" :class="{'active':choice.selected}"
                                 v-html="choice.label"></li>
                         </ul>
@@ -45,6 +49,9 @@
             _.each(arr, function (item) { _.set(item, property, value); });
         };
         const renderQuestions = function (questions) {
+            if (typeof questions === 'string') {
+                questions = JSON.parse(questions);
+            }
             questions = _.map(questions, function (question) {
                 setArrayObjectProperty(question.choices, 'selected', false);
                 return question;
@@ -59,10 +66,10 @@
                     selectChoice: function (question, choice) {
                         setArrayObjectProperty(question.choices, 'selected', false);
                         choice.selected = true;
-                        selection[question.id] = choice.points;
+                        this.selection[question.id] = choice.points;
                     },
                     getScore: function () {
-                        let score = _.sumBy(Object.values(selection));
+                        let score = _.sumBy(Object.values(this.selection));
                         console.log(score);
                     }
                 }
