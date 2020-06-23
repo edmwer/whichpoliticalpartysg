@@ -1,0 +1,17 @@
+{
+    "questions": [
+        {
+            "question": "Are you ready?",
+            "choices": [
+                {
+                    "label": "Yes",
+                    "points": 5
+                },
+                {
+                    "label": "No",
+                    "points": 0
+                }
+            ]
+        }
+    ]
+}
