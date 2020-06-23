@@ -40,6 +40,11 @@
             color: #ffffff;
             text-shadow: rgba(25, 25, 25, 0.5) 2px 2px;
         }
+
+        .hero div {
+            color: #ffffff;
+            font-size: 1em;
+        }
     </style>
 </head>
 
@@ -49,6 +54,11 @@
             <div class="container">
                 <div class="hero">
                     <h4>Which political party best aligns with me?</h4>
+                    <div>Disclaimer: This poll is strictly for entertainment purposes only and does not use any
+                        scientific methods to arrive at its conclusion.
+                        By staying on this page, you agree to indemnify the author of all damages. If you feel offended,
+                        here's a good <a href="https://gov.sg">website</a> to relax. Stay Safe!<br />
+                        No cookies were collected for the purpose of this survey. Your privacy is safe.</div>
                 </div>
                 <template v-for="question in questions">
                     <div class="form-group">
