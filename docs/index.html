@@ -52,6 +52,7 @@
                 questions = JSON.parse(questions);
             }
             questions = _.map(questions, function (question) {
+                console.log(question.label);
                 setArrayObjectProperty(question.choices, 'selected', false);
                 return question;
             });
