@@ -22,18 +22,19 @@
         <div class="container">
             <div id="vueapp">
                 <h4>Which political party represents me?</h4>
-                <div v-for="question in questions" v-html="question.label"></div>
-                <!-- <div class="form-group" v-for="question in questions">
-                    <label v-html="question.label"></label>
-                    <ul class="list-group">
-                        <li class="list-group-item option" v-for="choice in question.choices"
-                            @click="selectChoice(question, choice)" :class="{'active':choice.selected}"
-                            v-html="choice.label"></li>
-                    </ul>
-                </div>
+                <template v-for="question in questions">
+                    <div class="form-group">
+                        <label v-html="question.label"></label>
+                        <ul class="list-group">
+                            <li class="list-group-item option" v-for="choice in question.choices"
+                                @click="selectChoice(question, choice)" :class="{'active':choice.selected}"
+                                v-html="choice.label"></li>
+                        </ul>
+                    </div>
+                </template>
                 <div class="form-group">
                     <button class="btn btn-primary" @click="getScore()">Find out!</button>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -47,13 +48,11 @@
         const setArrayObjectProperty = function (arr, property, value) {
             _.each(arr, function (item) { _.set(item, property, value); });
         };
-        const renderQuestions = function (questions) {
-            if (typeof questions === 'string') {
-                questions = JSON.parse(questions);
+        const renderQuestions = function (data) {
+            if (typeof data === 'string') {
+                data = JSON.parse(data);
             }
-            console.log(`questions: (typeof ${typeof questions}) ${questions}`);
-            questions = _.map(questions, function (question) {
-                console.log(question.label);
+            questions = _.map(data.questions, function (question) {
                 setArrayObjectProperty(question.choices, 'selected', false);
                 return question;
             });
