@@ -1,15 +1,322 @@
 {
     "questions": [
         {
-            "question": "Are you ready?",
+            "id": 1,
+            "label": "What is the ideal age to withdraw CPF?",
             "choices": [
                 {
-                    "label": "Yes",
+                    " label": "Lump sum at 55",
+                    "points": 0
+                },
+                {
+                    "label": "Lump sum at 60",
                     "points": 5
+                },
+                {
+                    "label": "Lump sum at 65",
+                    "points": 10
+                },
+                {
+                    "label": "Pay a minimum annuity for life.",
+                    "points": 20
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "label": "Do you prefer high salary + high cost of living or low salary + low cost of living?",
+            "choices": [
+                {
+                    " label": "High salary + High cost of living",
+                    "points": 20
+                },
+                {
+                    "label": "Low salary + Low cost of living",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "label": "Do you prefer freedom or security?",
+            "choices": [
+                {
+                    " label": "Freedom",
+                    "points": 0
+                },
+                {
+                    "label": "Security",
+                    "points": 10
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "label": "Do you wish there are alternate taxes like Capital Gains Tax / Inheritance Tax instead of GST?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 0
+                },
+                {
+                    "label": "No",
+                    "points": 10
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "label": "Do you wish to see more immigration to Singapore?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 15
                 },
                 {
                     "label": "No",
                     "points": 0
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "label": "Do you like international cuisine (e.g. Mala Xiangguo) or local cuisine?",
+            "choices": [
+                {
+                    " label": "International <3",
+                    "points": 15
+                },
+                {
+                    "label": "I prefer local hokkien mee",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "label": "Do you consider yourself high SES or low SES?",
+            "choices": [
+                {
+                    " label": "High SES",
+                    "points": 20
+                },
+                {
+                    "label": "Low SES",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "label": "Should women serve NS?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 0
+                },
+                {
+                    "label": "No",
+                    "points": 20
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "label": "Should men serve NS?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 20
+                },
+                {
+                    "label": "No",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "label": "What is your ideal marriage age?",
+            "choices": [
+                {
+                    " label": "Below 25",
+                    "points": 0
+                },
+                {
+                    "label": "25 to 30",
+                    "points": 15
+                },
+                {
+                    "label": "31 to 35",
+                    "points": 20
+                },
+                {
+                    "label": "36 to 40",
+                    "points": 25
+                },
+                {
+                    "label": "Above 40 / Do not want to get married",
+                    "points": 30
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "label": "Should Section 377A be abolished?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": -25
+                },
+                {
+                    "label": "No",
+                    "points": 20
+                },
+                {
+                    "label": "What the hell is that?",
+                    "points": 5
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "label": "Do you prefer stability in a country?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 15
+                },
+                {
+                    "label": "No",
+                    "points": -10
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "label": "Are you / your loved ones migrants?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 15
+                },
+                {
+                    "label": "No",
+                    "points": -5
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "label": "Do you hate talking about politics?",
+            "choices": [
+                {
+                    " label": "Yes, shhhh...",
+                    "points": 30
+                },
+                {
+                    "label": "No, I love to talk about politics...",
+                    "points": -30
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "label": "Do you live in Hougang?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": -15
+                },
+                {
+                    "label": "No",
+                    "points": 5
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "label": "Do you like to buy Toto/4D?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 15
+                },
+                {
+                    "label": "No",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "label": "Do you like the recent Care &amp; Support package?",
+            "choices": [
+                {
+                    " label": "Yes, I donated it",
+                    "points": 25
+                },
+                {
+                    " label": "Yes, I think it's useful for my family",
+                    "points": 15
+                },
+                {
+                    "label": "No, it's just a gimmick.",
+                    "points": -15
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "label": "What do you think of Mothership.sg?",
+            "choices": [
+                {
+                    " label": "It's useful",
+                    "points": 15
+                },
+                {
+                    " label": "meh",
+                    "points": 15
+                },
+                {
+                    "label": "Just another mouthpiece of the gahmen.",
+                    "points": -15
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "label": "Do you earn more than $5,000 a month?",
+            "choices": [
+                {
+                    " label": "Yes",
+                    "points": 25
+                },
+                {
+                    "label": "No",
+                    "points": -10
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "label": "What first come to mind when you see a lighting strike?",
+            "choices": [
+                {
+                    " label": "Majulah PAP!",
+                    "points": 50
+                },
+                {
+                    " label": "My Kindergarten logo",
+                    "points": 25
+                },
+                {
+                    " label": "Going to rain loh",
+                    "points": 0
+                },
+                {
+                    "label": "CAT 1",
+                    "points": -10
                 }
             ]
         }

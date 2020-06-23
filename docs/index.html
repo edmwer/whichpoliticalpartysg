@@ -6,15 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Which Political Party Represents Me?</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        div.wall {
+            margin: 50px 0px 0px 0px;
+        }
+    </style>
 </head>
 
 <body>
-    And here it all begins...
+    <div class="wall">
+        <div class="container">
+            <div id="vueapp">
+                <h4>Which political party represents me?</h4>
+                <template v-for="question in questions">
+                    <div class="form-group">
+                        <label v-html="question.question"></label>
+                        <ul class="list-group">
+                            <li class="list-group-item" v-for="choice in question.choices"
+                                @click="selectChoice(question, choice)" :class="{'active':choice.selected}"></li>
+                        </ul>
+                    </div>
+                </template>
+                <div class="form-group">
+                    <button class="btn btn-primary" @click="getScore()">Find out!</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <script src="bundle.js"></script>
     <script>
+        let vueapp = null;
+        const setArrayObjectProperty = function (arr, property, value) {
+            _.each(arr, function (item) { _.set(item, property, value); });
+        };
+        const renderQuestions = function (questions) {
+            questions = _.map(questions, function (question) {
+                setArrayObjectProperty(question.choices, 'selected', false);
+                return question;
+            });
+            vueapp = new Vue({
+                el: '#vueapp',
+                data: {
+                    questions: questions,
+                    selection: {}
+                },
+                methods: {
+                    selectChoice: function (question, choice) {
+                        setArrayObjectProperty(question.choices, 'selected', false);
+                        choice.selected = true;
+                        selection[question.id] = choice.points;
+                    },
+                    getScore: function () {
+                        let score = _.sumBy(Object.values(selection));
+                        console.log(score);
+                    }
+                }
+            });
+        };
         $(document).ready(function () {
-            loadQuestions();
+            loadQuestions(renderQuestions);
         });
     </script>
 </body>
