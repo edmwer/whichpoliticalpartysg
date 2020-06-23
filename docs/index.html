@@ -22,16 +22,14 @@
         <div class="container">
             <div id="vueapp">
                 <h4>Which political party represents me?</h4>
-                <template v-for="question in questions">
-                    <div class="form-group">
-                        <label v-html="question.label"></label>
-                        <ul class="list-group">
-                            <li class="list-group-item option" v-for="choice in question.choices"
-                                @click="selectChoice(question, choice)" :class="{'active':choice.selected}"
-                                v-html="choice.label"></li>
-                        </ul>
-                    </div>
-                </template>
+                <div class="form-group" v-for="question in questions">
+                    <label v-html="question.label"></label>
+                    <ul class="list-group">
+                        <li class="list-group-item option" v-for="choice in question.choices"
+                            @click="selectChoice(question, choice)" :class="{'active':choice.selected}"
+                            v-html="choice.label"></li>
+                    </ul>
+                </div>
                 <div class="form-group">
                     <button class="btn btn-primary" @click="getScore()">Find out!</button>
                 </div>
