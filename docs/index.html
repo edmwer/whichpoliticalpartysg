@@ -51,6 +51,7 @@
             if (typeof questions === 'string') {
                 questions = JSON.parse(questions);
             }
+            console.log(`questions: (typeof ${typeof questions}) ${questions}`);
             questions = _.map(questions, function (question) {
                 console.log(question.label);
                 setArrayObjectProperty(question.choices, 'selected', false);
