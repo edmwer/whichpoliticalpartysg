@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         div.wall {
-            margin: 50px 0px 0px 0px;
+            margin: 0px;
         }
 
         li.list-group-item.option {
@@ -20,6 +20,26 @@
             font-weight: bold;
 
         }
+
+        .hero {
+            position: relative;
+            background: url('./hero.jpg') no-repeat 0px 0px;
+            background-size: cover;
+            height: 300px;
+            -webkit-box-shadow: 10px 10px 34px -4px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 10px 10px 34px -4px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 10px 34px -4px rgba(0, 0, 0, 0.75);
+            margin: 0px 0px 25px 0px;
+        }
+
+        .hero h4 {
+            position: absolute;
+            left: 10px;
+            bottom: 50px;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: rgba(25, 25, 25, 0.5) 2px 2px;
+        }
     </style>
 </head>
 
@@ -27,7 +47,9 @@
     <div id="vueapp">
         <div class="wall">
             <div class="container">
-                <h4>Which political party represents me?</h4>
+                <div class="hero">
+                    <h4>Which political party best aligns with me?</h4>
+                </div>
                 <template v-for="question in questions">
                     <div class="form-group">
                         <label v-html="question.label"></label>
